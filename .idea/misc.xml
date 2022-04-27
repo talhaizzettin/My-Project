@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/boder.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/ic_alif_background.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/ic_alifbeee_background.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/ic_alifbeelogo.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/more.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/mybutton.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/drawable/redbu.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/activity_moreby_alif_bee.xml" value="0.22" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/activity_parents_lock.xml" value="0.21" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/apps.xml" value="0.33" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/fragment_first_img.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/fragment_img_slid.xml" value="0.25" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/fragment_second_img.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/fragment_third_img.xml" value="0.1693121693121693" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/layout/topbar.xml" value="0.33" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/mipmap-anydpi-v26/ic_alif_round.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1945" />
+        <entry key="..\:/Users/talha/AndroidStudioProjects/AlifBee/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1945" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

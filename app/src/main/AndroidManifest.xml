@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alifbee">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/alifbeelogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/alifbeelogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AlifBee">
+        <activity
+            android:name=".ui.MorebyAlifBee"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:label="@string/more_by_alifBee"/>
+        <activity
+            android:name=".ui.ParentsLock"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:label="@string/parents_lock" />
+        <activity
+            android:name=".ui.HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:label="Home"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AlifBee.la"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AlifBee"
+            android:windowFullscreen="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

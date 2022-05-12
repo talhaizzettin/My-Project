@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".model.imgs.SecondImg">
+    tools:context=".ui.fragments.Sliderimg">
 
     <ImageView
-        android:id="@+id/videoImg"
+        android:id="@+id/gameImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/todo"
-        android:src="@drawable/video"
+        android:src="@drawable/game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

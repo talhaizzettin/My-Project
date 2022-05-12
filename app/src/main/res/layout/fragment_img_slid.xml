@@ -4,60 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".model.ImgSlidFrag">
+    tools:context=".ui.fragments.ImgSlidFrag">
 
-    <LinearLayout
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imgslider"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11">
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:scaleType="fitEnd"
-            android:src="@drawable/buttomcloudl"
-            tools:ignore="ImageContrastCheck" />
+    </androidx.viewpager2.widget.ViewPager2>
 
-        <ImageView
-            android:id="@+id/backimgbut"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:paddingStart="0dp"
-            android:paddingEnd="30dp"
-            android:src="@drawable/monofigatiol"
-            tools:visibility="invisible" />
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitEnd"
+        android:src="@drawable/buttomcloudl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/imgslider"
-            android:layout_width="280dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+    <ImageView
+        android:id="@+id/backimgbut"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/todo"
+        android:paddingStart="0dp"
+        android:paddingEnd="30dp"
+        android:src="@drawable/monofigatiol"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        tools:layout_editor_absoluteY="0dp"
+        tools:visibility="invisible" />
 
-        <ImageView
-            android:id="@+id/nextimgbut"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:paddingStart="30dp"
-            android:paddingEnd="0dp"
-            android:src="@drawable/monofigatior" />
+    <ImageView
+        android:id="@+id/nextimgbut"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/todo"
+        android:paddingStart="30dp"
+        android:paddingEnd="0dp"
+        android:src="@drawable/ragitimg"
+        app:layout_constraintEnd_toStartOf="@+id/imageView11" />
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:scaleType="fitEnd"
-            android:src="@drawable/buttomcloudr"
-            tools:ignore="ImageContrastCheck" />
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitEnd"
+        android:src="@drawable/buttomcloudr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

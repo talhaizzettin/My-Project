@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/imgSlidFrag"
-        android:name="com.example.alifbee.model.ImgSlidFrag"
+        android:name="com.example.alifbee.ui.fragments.ImgSlidFrag"
         android:label="fragment_img_slid"
         tools:layout="@layout/fragment_img_slid" />
 </navigation>

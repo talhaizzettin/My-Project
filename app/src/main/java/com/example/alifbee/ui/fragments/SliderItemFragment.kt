@@ -1,16 +1,21 @@
-package com.example.alifbee.ui
+package com.example.alifbee.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import com.example.alifbee.R
+import com.example.alifbee.databinding.FragmentSliderImgsBinding
 
 
 class SliderItemFragment : Fragment() {
     private var position: Int = 0
+
+    private var _binding: FragmentSliderImgsBinding? = null
+    private val binding get() = _binding!!
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -18,28 +23,26 @@ class SliderItemFragment : Fragment() {
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_slider_imgs, container, false)
+    ): View {
+        _binding = FragmentSliderImgsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getView()?.apply {
-            val gameImg: ImageView = findViewById(R.id.gameImg)
             when (position) {
-                0 -> {
-                    gameImg.setImageResource(R.drawable.game)
-                }
-                1 -> {
-                    gameImg.setImageResource(R.drawable.video)
-                }
-                2 -> {
-                    gameImg.setImageResource(R.drawable.music)
-                }
+                0 -> binding.gameImg.setImageResource(R.drawable.game)
+                1 -> binding.gameImg.setImageResource(R.drawable.video)
+                2 -> binding.gameImg.setImageResource(R.drawable.music)
             }
         }
     }

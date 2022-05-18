@@ -9,8 +9,6 @@ import android.os.Handler
 import android.view.View
 
 
-
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -25,17 +23,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(intent)
             finish()
-        },2000)
+        }, 2000)
     }
+
     private fun hideSystemBars() {
         //val windowInsetsController =
-           // ViewCompat.getWindowInsetsController(window.decorView) ?: return
-
+        // ViewCompat.getWindowInsetsController(window.decorView) ?: return
         //windowInsetsController.systemBarsBehavior =
-           // WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-
+        // WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         //windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+
         actionBar?.hide()
     }
 }

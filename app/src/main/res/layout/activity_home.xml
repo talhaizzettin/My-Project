@@ -44,19 +44,18 @@
 
         <TableRow
             android:id="@+id/morebu"
-            android:layout_width="0px"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/more"
+            android:background="@drawable/morebut"
             android:paddingStart="10dp"
-            android:paddingTop="3dp"
+            android:paddingTop="10dp"
             android:paddingEnd="10dp"
-            android:paddingBottom="3dp">
+            android:paddingBottom="15dp">
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:contentDescription="@string/todo"
                 android:paddingStart="0dp"
                 android:paddingEnd="3dp"
@@ -68,21 +67,73 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/dosis_semi_bold"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:text="@string/more_by_us"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 tools:ignore="TextContrastCheck" />
         </TableRow>
 
     </LinearLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/my_nav" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imgslider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11">
+
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitEnd"
+            android:src="@drawable/buttomcloudl"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/backimgbut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/imageView10"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/monofigatiol" />
+
+        <ImageView
+            android:id="@+id/nextimgbut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ragitimg"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imageView11"
+             />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitEnd"
+            android:src="@drawable/buttomcloudr"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            tools:ignore="ImageContrastCheck" />
+    </RelativeLayout>
 
 </LinearLayout>

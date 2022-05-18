@@ -8,15 +8,19 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import androidx.viewpager2.widget.ViewPager2
 import com.example.alifbee.R
 import com.example.alifbee.databinding.ActivityHomeBinding
-
+import com.example.alifbee.ui.Constants
+import com.example.alifbee.ui.adapters.ImgSlidAdapter
 
 
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+    private var movedOutSide = true
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,20 +28,19 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         hideSystemBars()
 
-       // imf.setOnClickListener(View.OnClickListener { imf.setImageDrawable(getDrawable(R.drawable.off)) })
         setContentView(binding.root)
-        var movedOutSide = true
 
-        var musi = true
 
-        binding.morebu.setOnTouchListener(){v : View , event : MotionEvent ->
+        var music = true
+
+        binding.morebu.setOnTouchListener { v: View, event: MotionEvent ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     movedOutSide = false
                     v.animate().apply {
                         duration = 100
-                        scaleX(0.8f)
-                        scaleY(0.8f)
+                        scaleX(0.9f)
+                        scaleY(0.9f)
                     }.start()
                 }
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
@@ -63,34 +66,114 @@ class HomeActivity : AppCompatActivity() {
             false
         }
 
-
-
-
-        binding.morebu.setOnClickListener{
+        binding.morebu.setOnClickListener {
             val intent = Intent(this@HomeActivity, MoreActivity::class.java)
             startActivity(intent)
 
         }
 
-        binding.musicImg.setOnClickListener{
-            if(musi == true){
+        binding.musicImg.setOnClickListener {
+            music = if (music) {
                 binding.musicImg.setImageResource(R.drawable.off)
-                musi=false
-            }
-            else{
+                false
+            } else {
                 binding.musicImg.setImageResource(R.drawable.on)
-                musi=true
+                true
             }
         }
+        binding.backimgbut.visibility = View.INVISIBLE
 
+        val adapter = ImgSlidAdapter(supportFragmentManager, lifecycle)
+
+        binding.imgslider.adapter = adapter
+
+        binding.nextimgbut.setOnTouchListener { vi, motionEvent ->
+            setOnTouchListener(vi, motionEvent)
+        }
+
+        binding.backimgbut.setOnTouchListener { vi, motionEvent ->
+            setOnTouchListener(vi, motionEvent)
+        }
+
+        binding.nextimgbut.setOnClickListener {
+            chek(Constants.NEXT_PAGE)
+        }
+
+        binding.backimgbut.setOnClickListener {
+            chek(Constants.PREV_PAGE)
+        }
+
+        binding.imgslider.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                binding.nextimgbut.visibility = View.VISIBLE
+                binding.backimgbut.visibility = View.VISIBLE
+                if (binding.imgslider.currentItem == 3 - 1) {
+                    binding.nextimgbut.visibility = View.INVISIBLE
+                }
+                if (binding.imgslider.currentItem == 0) {
+                    binding.backimgbut.visibility = View.INVISIBLE
+                }
+
+            }
+        })
     }
+
+    private fun chek(way: Int) {
+        when (way) {
+            Constants.NEXT_PAGE -> {
+                binding.imgslider.currentItem++
+            }
+            Constants.PREV_PAGE -> {
+                binding.imgslider.currentItem--
+            }
+        }
+    }
+
+    private fun setOnTouchListener(v: View, event: MotionEvent): Boolean {
+        Log.e("Touch", "event: ${event.action}")
+        when (event.action) {
+            MotionEvent.ACTION_DOWN -> {
+                movedOutSide = false
+                v.animate().apply {
+                    duration = 100
+                    scaleX(0.5f)
+                    scaleY(0.5f)
+                }.start()
+            }
+
+            MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                movedOutSide = true
+                v.animate().apply {
+                    duration = 100
+                    scaleX(1f)
+                    scaleY(1f)
+                }.start()
+            }
+
+            MotionEvent.ACTION_MOVE -> {
+                val rect = Rect(v.left, v.top, v.right, v.bottom)
+                if (!rect.contains(
+                        v.left + event.x.toInt(),
+                        v.top + event.y.toInt()
+                    ) && !movedOutSide
+                ) {
+                    movedOutSide = true
+                    v.animate().scaleX(1f).scaleY(1f).setDuration(100).start()
+                }
+            }
+        }
+        return false
+    }
+
     private fun hideSystemBars() {
-      //  val windowInsetsController =
-           // ViewCompat.getWindowInsetsController(window.decorView) ?: return
-       // windowInsetsController.systemBarsBehavior =
-           // WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        //  val windowInsetsController =
+        // ViewCompat.getWindowInsetsController(window.decorView) ?: return
+        // windowInsetsController.systemBarsBehavior =
+        // WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         //windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         actionBar?.hide()
 
     }

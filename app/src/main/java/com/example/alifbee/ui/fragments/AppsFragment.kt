@@ -13,8 +13,6 @@ import com.example.alifbee.api.Retr
 import com.example.alifbee.databinding.FragmentAppsBinding
 import com.example.alifbee.model.AppsRes
 import com.example.alifbee.ui.adapters.Apps2Adapter
-import kotlinx.android.synthetic.main.fragment_apps.view.*
-import kotlinx.android.synthetic.main.fragment_lock.view.*
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -22,9 +20,8 @@ import java.io.IOException
 class AppsFragment : Fragment() {
 
     private lateinit var apps2Adapter: Apps2Adapter
+
     private var _binding: FragmentAppsBinding? = null
-
-
     private val binding get() = _binding!!
 
 
@@ -32,7 +29,7 @@ class AppsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAppsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -46,14 +43,11 @@ class AppsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
-
         setupRV()
 
         lifecycleScope.launchWhenCreated {
             binding.porBar.isVisible = true
-            val jsonapps = try {
+            val jsonApps = try {
                 Retr.api.getApps()
             } catch (e: IOException) {
                 Log.e("Error", "INT no")
@@ -64,12 +58,12 @@ class AppsFragment : Fragment() {
                 binding.porBar.isVisible = false
                 return@launchWhenCreated
             }
-            if (jsonapps.isSuccessful && jsonapps.body() != null) {
-                val theApps: AppsRes = jsonapps.body()!!
+            if (jsonApps.isSuccessful && jsonApps.body() != null) {
+                val theApps: AppsRes = jsonApps.body()!!
                 apps2Adapter.apps = theApps.body.our_apps.en
             } else {
-                Log.e("body", "${jsonapps.body()}")
-                Log.e("isSuccessful", "${jsonapps.isSuccessful}")
+                Log.e("body", "${jsonApps.body()}")
+                Log.e("isSuccessful", "${jsonApps.isSuccessful}")
             }
             binding.porBar.isVisible = false
         }

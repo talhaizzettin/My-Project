@@ -1,14 +1,11 @@
 package com.example.alifbee.api
 
 import com.example.alifbee.model.AppsRes
-import com.example.alifbee.model.Body
-import com.example.alifbee.model.En
-import com.example.alifbee.model.OurApps
 import retrofit2.Response
 import retrofit2.http.GET
 
 interface MyApi {
 
     @GET("/api/v2/general/initial?format=json")
-    suspend fun getApps () : Response<AppsRes>
+    suspend fun getApps(): Response<AppsRes>
 }

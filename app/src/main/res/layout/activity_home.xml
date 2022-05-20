@@ -20,14 +20,14 @@
 
         <TextView
             android:id="@+id/toptv"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/dosis_bold"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:text="@string/exploration"
-            android:textAlignment="viewStart"
             android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
@@ -37,43 +37,29 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="13dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:contentDescription="@string/todo"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:scaleType="fitEnd"
             app:srcCompat="@drawable/on" />
 
-        <TableRow
-            android:id="@+id/morebu"
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/morebut"
-            android:paddingStart="10dp"
+            android:drawableStart="@drawable/buticon"
+            android:drawablePadding="30dp"
+            android:fontFamily="@font/dosis_semi_bold"
+            android:paddingStart="15dp"
             android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="15dp">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/todo"
-                android:paddingStart="0dp"
-                android:paddingEnd="3dp"
-                app:srcCompat="@drawable/buticon"
-                tools:ignore="ImageContrastCheck" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/dosis_semi_bold"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:text="@string/more_by_us"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                tools:ignore="TextContrastCheck" />
-        </TableRow>
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="@string/more_by_us"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 
@@ -92,16 +78,15 @@
         </androidx.viewpager2.widget.ViewPager2>
 
 
-
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
             android:contentDescription="@string/todo"
             android:scaleType="fitEnd"
             android:src="@drawable/buttomcloudl"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
@@ -117,12 +102,10 @@
             android:id="@+id/nextimgbut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ragitimg"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:layout_toStartOf="@+id/imageView11"
-             />
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ragitimg" />
 
         <ImageView
             android:id="@+id/imageView11"

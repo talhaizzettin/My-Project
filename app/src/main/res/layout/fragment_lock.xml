@@ -8,11 +8,10 @@
     tools:context=".ui.fragments.LockFragment">
 
 
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="160dp"
         android:layout_marginTop="4dp"
         android:contentDescription="@string/todo"
         android:src="@drawable/rame"
@@ -52,274 +51,180 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textnum"
-        app:layout_constraintVertical_bias="0.100000024">
+        app:layout_constraintVertical_bias="0.13"
+        app:layout_constraintWidth_percent="0.9">
 
         <TextView
             android:id="@+id/num1"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/boder"
-            android:fontFamily="@font/dosis_semi_bold"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
+            style="@style/numText"
+            app:layout_constraintBottom_toTopOf="@+id/bu1"
+            app:layout_constraintEnd_toStartOf="@+id/num2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19999999"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
-            android:id="@+id/num2"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/boder"
-            android:fontFamily="@font/dosis_semi_bold"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            app:layout_constraintStart_toEndOf="@+id/num1"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/num3"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/boder"
-            android:fontFamily="@font/dosis_semi_bold"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/num2"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
+            class=""
             android:id="@+id/bu1"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+            style="@style/lockBtn"
             android:text="@string/num1"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/bu4"
+            app:layout_constraintEnd_toStartOf="@+id/bu2"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/num1" />
 
         <TextView
-            android:id="@+id/bu2"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
-            android:text="@string/num2"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/bu3"
-            app:layout_constraintStart_toEndOf="@+id/bu1"
-            app:layout_constraintTop_toBottomOf="@+id/num2" />
-
-        <TextView
-            android:id="@+id/bu3"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
-            android:text="@string/num3"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/num3" />
-
-        <TextView
             android:id="@+id/bu4"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+            style="@style/lockBtn"
+            android:layout_width="wrap_content"
             android:text="@string/num4"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/bu7"
+            app:layout_constraintEnd_toStartOf="@+id/bu5"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bu1" />
 
         <TextView
-            android:id="@+id/bu5"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
-            android:text="@string/num5"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/bu6"
-            app:layout_constraintStart_toEndOf="@+id/bu4"
-            app:layout_constraintTop_toBottomOf="@+id/bu2" />
-
-        <TextView
-            android:id="@+id/bu6"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
-            android:text="@string/num6"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bu3" />
-
-        <TextView
             android:id="@+id/bu7"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+            style="@style/lockBtn"
+            android:layout_width="wrap_content"
             android:text="@string/num7"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/buh"
+            app:layout_constraintEnd_toStartOf="@+id/bu8"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bu4" />
 
         <TextView
+            android:id="@+id/buh"
+            style="@style/lockBtn"
+            android:text="@string/num0"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bu0"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bu7" />
+
+        <TextView
+            android:id="@+id/num2"
+            style="@style/numText"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/num1"
+            app:layout_constraintEnd_toStartOf="@+id/num3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/num1"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/num3"
+            style="@style/numText"
+            app:layout_constraintBaseline_toBaselineOf="@+id/num1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/num2"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/bu2"
+            style="@style/lockBtn"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/num2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bu1"
+            app:layout_constraintEnd_toStartOf="@+id/bu3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bu1" />
+
+        <TextView
+            android:id="@+id/bu3"
+            style="@style/lockBtn"
+            android:text="@string/num3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bu1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bu2" />
+
+        <TextView
+            android:id="@+id/bu5"
+            style="@style/lockBtn"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/num5"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bu4"
+            app:layout_constraintEnd_toStartOf="@+id/bu6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bu4" />
+
+        <TextView
+            android:id="@+id/bu6"
+            style="@style/lockBtn"
+            android:text="@string/num6"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bu5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bu5" />
+
+        <TextView
             android:id="@+id/bu8"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+            style="@style/lockBtn"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="@string/num8"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bu7"
             app:layout_constraintEnd_toStartOf="@+id/bu9"
-            app:layout_constraintStart_toEndOf="@+id/bu7"
-            app:layout_constraintTop_toBottomOf="@+id/bu5" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bu7" />
 
         <TextView
             android:id="@+id/bu9"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+            style="@style/lockBtn"
             android:text="@string/num9"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bu8"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bu6" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bu8" />
 
         <TextView
             android:id="@+id/bu0"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+            style="@style/lockBtn"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="@string/num0"
-            android:textAlignment="center"
-            android:textColor="@color/num"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buh"
             app:layout_constraintEnd_toStartOf="@+id/bude"
-            app:layout_constraintStart_toEndOf="@+id/buh"
-            app:layout_constraintTop_toBottomOf="@+id/bu8" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buh" />
 
         <TextView
             android:id="@+id/bude"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            style="@style/lockBtn"
             android:background="@drawable/redbu"
-            android:fontFamily="@font/dosis_bold"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
             android:text="@string/numdel"
-            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bu0"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bu9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bu0"
             tools:ignore="TextContrastCheck" />
 
-        <TextView
-            android:id="@+id/buh"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/mybutton"
-            android:paddingStart="30dp"
-            android:paddingTop="7dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="7dp"
-            android:text="@string/num0"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bu7" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="617dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

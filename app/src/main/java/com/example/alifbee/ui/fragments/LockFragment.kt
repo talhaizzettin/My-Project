@@ -194,6 +194,7 @@ class LockFragment : Fragment() {
                 thirdNum = theNum
                 if (numb1 == firstNum && numb2 == secondNum && numb3 == thirdNum) {
                     findNavController().navigate(R.id.action_lockFragment_to_moreFragment)
+
                 } else {
                     Toast.makeText(context,"Try Agn",Toast.LENGTH_LONG).show()
                 }

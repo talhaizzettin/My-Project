@@ -51,6 +51,8 @@ class MoreActivity : AppCompatActivity() {
             false
         }
 
+
+
         binding.morebackbut.setOnClickListener {
             onBackPressed()
             finish()

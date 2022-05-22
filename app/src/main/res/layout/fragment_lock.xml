@@ -69,8 +69,7 @@
             app:layout_constraintVertical_bias="0.19999999"
             app:layout_constraintVertical_chainStyle="packed" />
 
-        <TextView
-            class=""
+        <com.example.alifbee.ui.MyTextView
             android:id="@+id/bu1"
             style="@style/lockBtn"
             android:text="@string/num1"
@@ -80,7 +79,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/num1" />
 
-        <TextView
+        <com.example.alifbee.ui.MyTextView
             android:id="@+id/bu4"
             style="@style/lockBtn"
             android:layout_width="wrap_content"
@@ -133,7 +132,7 @@
             app:layout_constraintStart_toEndOf="@+id/num2"
             app:layout_constraintVertical_chainStyle="packed" />
 
-        <TextView
+        <com.example.alifbee.ui.MyTextView
             android:id="@+id/bu2"
             style="@style/lockBtn"
             android:layout_marginStart="10dp"
@@ -144,7 +143,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/bu1" />
 
-        <TextView
+        <com.example.alifbee.ui.MyTextView
             android:id="@+id/bu3"
             style="@style/lockBtn"
             android:text="@string/num3"
@@ -153,7 +152,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/bu2" />
 
-        <TextView
+        <com.example.alifbee.ui.MyTextView
             android:id="@+id/bu5"
             style="@style/lockBtn"
             android:layout_marginStart="10dp"
@@ -164,7 +163,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/bu4" />
 
-        <TextView
+        <com.example.alifbee.ui.MyTextView
             android:id="@+id/bu6"
             style="@style/lockBtn"
             android:text="@string/num6"

@@ -45,7 +45,7 @@
             app:srcCompat="@drawable/on" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/moreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/morebut"

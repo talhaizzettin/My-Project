@@ -3,17 +3,11 @@ package com.example.alifbee.ui.activity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Rect
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import android.view.WindowInsets
-import android.view.WindowInsetsController
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.example.alifbee.R
 import com.example.alifbee.databinding.ActivityHomeBinding
@@ -39,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
 
         var music = true
 
-        binding.morebu.setOnTouchListener { v: View, event: MotionEvent ->
+        binding.moreTV.setOnTouchListener { v: View, event: MotionEvent ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     movedOutSide = false
@@ -72,7 +66,7 @@ class HomeActivity : AppCompatActivity() {
             false
         }
 
-        binding.morebu.setOnClickListener {
+        binding.moreTV.setOnClickListener {
             val intent = Intent(this@HomeActivity, MoreActivity::class.java)
             startActivity(intent)
 

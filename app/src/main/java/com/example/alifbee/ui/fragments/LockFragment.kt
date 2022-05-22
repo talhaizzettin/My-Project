@@ -61,57 +61,32 @@ class LockFragment : Fragment() {
             myCheck()
         }
 
-        binding.bu1.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
-        }
         binding.bu1.setOnClickListener {
             theNum = 1
             myCheck()
-        }
-
-        binding.bu2.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
         }
         binding.bu2.setOnClickListener {
             theNum = 2
             myCheck()
         }
-
-        binding.bu3.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
-        }
         binding.bu3.setOnClickListener {
             theNum = 3
             myCheck()
-        }
-
-        binding.bu4.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
         }
         binding.bu4.setOnClickListener {
             theNum = 4
             myCheck()
         }
-
-        binding.bu5.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
-        }
         binding.bu5.setOnClickListener {
             theNum = 5
             myCheck()
-        }
-
-        binding.bu6.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
         }
         binding.bu6.setOnClickListener {
             theNum = 6
             myCheck()
         }
 
-        binding.bu7.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
-        }
+
         binding.bu7.setOnClickListener {
             theNum = 7
             myCheck()

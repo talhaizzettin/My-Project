@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="lockBtn" >
-        <item name="android:background">@drawable/mybutton</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:fontFamily">@font/dosis_bold</item>
-        <item name="android:paddingEnd">40dp</item>
-        <item name="android:paddingStart">40dp</item>
-        <item name="android:paddingBottom">15dp</item>
-        <item name="android:paddingTop">7dp</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textColor">@color/num</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="btnIconVisible">false</item>
+        <item name="btnTextColor">@color/num</item>
+        <item name="btnTextSize">18sp</item>
+
+
+    </style>
+    <style name="delBtn">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="btnIconVisible">false</item>
+        <item name="btnTextColor">@color/white</item>
+        <item name="btnTextSize">18sp</item>
+        <item name="btnBackgrond">@drawable/redbu</item>
+        <item name="btnShadow">@drawable/redbu</item>
     </style>
     <style name="numText">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:background">@drawable/boder</item>
-        <item name="android:fontFamily">@font/dosis_semi_bold</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">32sp</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>

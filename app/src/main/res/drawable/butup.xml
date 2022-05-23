@@ -4,7 +4,7 @@
         <shape  android:shape="rectangle">
             <solid android:color="@color/but" />
             <corners android:radius="18dip" />
-            <stroke  android:width="3dip" android:color="@color/num" />
+            <stroke  android:width="2dip" android:color="@color/num" />
         </shape>
     </item>
     <!-- White Top color -->

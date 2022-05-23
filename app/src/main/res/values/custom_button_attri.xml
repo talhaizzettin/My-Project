@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="MyCustomView">
+        <attr name="btnIconVisible" format="boolean" />
+        <attr name="btnIconId" format="integer" />
+        <attr name="btnText" format="string"/>
+        <attr name="btnTextSize" format="dimension"/>
+        <attr name="btnTextColor" format="color"/>
+        <attr name="btnBackgrond" format="integer"/>
+        <attr name="btnShadow" format="integer"/>
+    </declare-styleable>
+</resources>

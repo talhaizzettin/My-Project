@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.view.marginTop
 import androidx.viewpager2.widget.ViewPager2
 import com.example.alifbee.R
 import com.example.alifbee.databinding.ActivityHomeBinding

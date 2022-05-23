@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.alifbee.R
 import com.example.alifbee.databinding.FragmentLockBinding
+import com.example.alifbee.ui.utils.touchListener
 import kotlin.random.Random
 
 class LockFragment : Fragment() {
@@ -28,8 +29,6 @@ class LockFragment : Fragment() {
     private var firstNum: Int = 0
     private var secondNum: Int = 0
     private var thirdNum: Int = 0
-
-    private var movedOutSide = true
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -53,14 +52,10 @@ class LockFragment : Fragment() {
 
         randomNum()
 
-        binding.bu0.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
-        }
         binding.bu0.setOnClickListener {
             theNum = 0
             myCheck()
         }
-
         binding.bu1.setOnClickListener {
             theNum = 1
             myCheck()
@@ -85,35 +80,23 @@ class LockFragment : Fragment() {
             theNum = 6
             myCheck()
         }
-
-
         binding.bu7.setOnClickListener {
             theNum = 7
             myCheck()
-        }
-
-        binding.bu8.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
         }
         binding.bu8.setOnClickListener {
             theNum = 8
             myCheck()
         }
-
-        binding.bu9.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
-        }
         binding.bu9.setOnClickListener {
             theNum = 9
             myCheck()
         }
-
-        binding.bude.setOnTouchListener { vi, motionEvent ->
-            ani(vi, motionEvent)
-        }
         binding.bude.setOnClickListener {
             del()
         }
+
+        binding.bude.setOnTouchListener(touchListener)
 
     }
 
@@ -171,46 +154,9 @@ class LockFragment : Fragment() {
                     findNavController().navigate(R.id.action_lockFragment_to_moreFragment)
 
                 } else {
-                    Toast.makeText(context,"Try Agn",Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Try Agn", Toast.LENGTH_LONG).show()
                 }
             }
         }
-
-    }
-
-    private fun ani(v: View, event: MotionEvent): Boolean {
-        Log.e("Touch", "event: ${event.action}")
-        when (event.action) {
-            MotionEvent.ACTION_DOWN -> {
-                movedOutSide = false
-                v.animate().apply {
-                    duration = 100
-                    scaleX(0.9f)
-                    scaleY(0.9f)
-                }.start()
-            }
-
-            MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                movedOutSide = true
-                v.animate().apply {
-                    duration = 100
-                    scaleX(1f)
-                    scaleY(1f)
-                }.start()
-            }
-
-            MotionEvent.ACTION_MOVE -> {
-                val rect = Rect(v.left, v.top, v.right, v.bottom)
-                if (!rect.contains(
-                        v.left + event.x.toInt(),
-                        v.top + event.y.toInt()
-                    ) && !movedOutSide
-                ) {
-                    movedOutSide = true
-                    v.animate().scaleX(1f).scaleY(1f).setDuration(100).start()
-                }
-            }
-        }
-        return false
     }
 }

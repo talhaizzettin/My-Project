@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ba"
-    android:backgroundTint="@color/primary_color"
-    android:backgroundTintMode="add"
+    android:background="@color/primary_color"
     android:orientation="vertical"
     tools:context=".ui.activity.HomeActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rotationY="@integer/rotate_en"
+        android:scaleType="fitXY"
+        android:src="@drawable/ba" />
+
     <LinearLayout
+        android:id="@+id/lin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingStart="20dp"
         android:paddingTop="15dp"
-        android:paddingEnd="20dp">
+        android:paddingEnd="20dp"
+       >
 
         <TextView
             android:id="@+id/toptv"
@@ -34,31 +41,28 @@
 
         <ImageView
             android:id="@+id/music_img"
-            android:layout_width="0dp"
+
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="13dp"
-            android:layout_weight="1"
             android:contentDescription="@string/todo"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/on" />
+            app:srcCompat="@drawable/on"
+            />
 
-        <TextView
+        <com.example.alifbee.ui.MyCustomView
             android:id="@+id/moreTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/morebut"
-            android:drawableStart="@drawable/buticon"
-            android:drawablePadding="30dp"
-            android:fontFamily="@font/dosis_semi_bold"
-            android:paddingStart="15dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="15dp"
-            android:paddingBottom="10dp"
-            android:text="@string/more_by_us"
-            android:textColor="@color/white"
-            android:textSize="15sp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:btnBackgrond="@drawable/blue_bg"
+            app:btnShadow="@drawable/shadow_of_blue_bg"
+            app:btnBorder="@drawable/border_of_blue_bg"
+            app:btnTextColor="@color/white"
+            app:btnIconVisible="true"
+            app:btnIconId="@drawable/buticon"
+            app:btnText="@string/more_by_us"
+            app:btnTextSize="15sp"
             tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
@@ -66,10 +70,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/lin"
+        android:layout_marginTop="0dp"
         android:orientation="horizontal">
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/imgslider"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="@+id/imageView11">
@@ -85,6 +92,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:contentDescription="@string/todo"
+            android:rotationY="@integer/rotate_en"
             android:scaleType="fitEnd"
             android:src="@drawable/buttomcloudl"
             tools:ignore="ImageContrastCheck" />
@@ -96,27 +104,31 @@
             android:layout_centerInParent="true"
             android:layout_toEndOf="@+id/imageView10"
             android:contentDescription="@string/todo"
+            android:rotationY="@integer/rotate_en"
             android:src="@drawable/monofigatiol" />
 
         <ImageView
+
             android:id="@+id/nextimgbut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_toStartOf="@+id/imageView11"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ragitimg" />
+            android:rotationY="@integer/rotate_ar"
+            android:src="@drawable/monofigatiol" />
 
         <ImageView
             android:id="@+id/imageView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            android:scaleType="fitEnd"
-            android:src="@drawable/buttomcloudr"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/todo"
+            android:rotationY="@integer/rotate_ar"
+            android:scaleType="fitEnd"
+            android:src="@drawable/buttomcloudl"
             tools:ignore="ImageContrastCheck" />
     </RelativeLayout>
 
-</LinearLayout>
+</RelativeLayout>

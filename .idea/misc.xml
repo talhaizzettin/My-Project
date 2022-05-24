@@ -49,6 +49,8 @@
         <entry key="..\:/Users/talha/AndroidStudioProjects/My-Project/app/src/main/res/menu/more_menu.xml" value="0.2" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/boder.xml" value="0.3635" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/border.xml" value="0.3635" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/border_of_red_bg.xml" value="0.336" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/border_of_white_bg.xml" value="0.336" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/botbris.xml" value="0.2695" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/butup.xml" value="0.2695" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/cview.xml" value="0.3635" />
@@ -58,8 +60,14 @@
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/morebutup.xml" value="0.2695" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/mybutton.xml" value="0.2695" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/redbu.xml" value="0.3635" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/shado_of_red_bg.xml" value="0.336" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/shadow_of_blue_bg.xml" value="0.3615" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/shadow_of_red_bg.xml" value="0.336" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/shadow_with_border.xml" value="0.3625" />
-        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/activity_home.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/whiteBg.xml" value="0.3585" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/drawable/white_bg.xml" value="0.3585" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout-ar/fragment_lock.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/activity_main.xml" value="0.34601449275362317" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/activity_more.xml" value="0.34601449275362317" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/apps.xml" value="0.3625" />
@@ -69,6 +77,7 @@
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/fragment_img_slid.xml" value="0.34601449275362317" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/fragment_lock.xml" value="0.33" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/fragment_slider_imgs.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/num_keys.xml" value="0.67" />
         <entry key="..\:/Users/usra tv/AndroidStudioProjects/My-Project/app/src/main/res/layout/test.xml" value="0.3614583333333333" />
       </map>
     </option>

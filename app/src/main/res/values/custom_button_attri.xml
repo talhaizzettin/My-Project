@@ -7,5 +7,6 @@
         <attr name="btnTextColor" format="color"/>
         <attr name="btnBackgrond" format="integer"/>
         <attr name="btnShadow" format="integer"/>
+        <attr name="btnBorder" format="integer"/>
     </declare-styleable>
 </resources>

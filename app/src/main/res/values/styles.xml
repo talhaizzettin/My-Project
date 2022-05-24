@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="lockBtn" >
-        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">80dp</item>
         <item name="btnIconVisible">false</item>
         <item name="btnTextColor">@color/num</item>
         <item name="btnTextSize">18sp</item>
-
-
+        <item name="btnBackgrond">@drawable/white_bg</item>
+        <item name="btnShadow">@drawable/shadow_of_white_bg</item>
+        <item name="btnBorder">@drawable/border_of_white_bg</item>
     </style>
     <style name="delBtn">
-        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">80dp</item>
         <item name="btnIconVisible">false</item>
         <item name="btnTextColor">@color/white</item>
         <item name="btnTextSize">18sp</item>
-        <item name="btnBackgrond">@drawable/redbu</item>
-        <item name="btnShadow">@drawable/redbu</item>
+        <item name="btnBackgrond">@drawable/red_bg</item>
+        <item name="btnShadow">@drawable/shadow_of_red_bg</item>
+        <item name="btnBorder">@drawable/border_of_red_bg</item>
     </style>
     <style name="numText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="musimg">
+        <item name="android:scaleType">fitEnd</item>
     </style>
 </resources>

@@ -11,7 +11,9 @@
     <color name="but">#B3C5EF</color>
     <color name="num">#683B72</color>
     <color name="red">#EE4035</color>
-    <color name="redda">#96051F</color>
+    <color name="redMedium">#C51A1A</color>
+    <color name="redDark">#96051F</color>
     <color name="titleofapps">#683B72</color>
     <color name="url">#4B7DEC</color>
+    <color name="blueDark">#5B52D2</color>
 </resources>

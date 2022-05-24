@@ -15,6 +15,7 @@ import com.example.alifbee.model.AppsRes
 import com.example.alifbee.ui.adapters.Apps2Adapter
 import retrofit2.HttpException
 import java.io.IOException
+import java.util.*
 
 
 class AppsFragment : Fragment() {
@@ -60,7 +61,12 @@ class AppsFragment : Fragment() {
             }
             if (jsonApps.isSuccessful && jsonApps.body() != null) {
                 val theApps: AppsRes = jsonApps.body()!!
-                apps2Adapter.apps = theApps.body.our_apps.en
+                if (Locale.getDefault().language == Locale("ar").language)
+                    apps2Adapter.apps = theApps.body.our_apps.ar
+                else {
+                    apps2Adapter.apps = theApps.body.our_apps.en
+                }
+                apps2Adapter.notifyDataSetChanged()
             } else {
                 Log.e("body", "${jsonApps.body()}")
                 Log.e("isSuccessful", "${jsonApps.isSuccessful}")

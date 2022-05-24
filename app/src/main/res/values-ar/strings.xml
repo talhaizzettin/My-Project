@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Alif Bee</string>
     <string name="todo">TODO</string>
-    <string name="exploration">Exploration Path</string>
+    <string name="exploration">مسار الاستكشاف</string>
     <string name="button">More By Us</string>
-    <string name="more_by_us">More By Us</string>
+    <string name="more_by_us">المزيد من قبلنا</string>
     <string name="top_bar">Top Bar</string>
-    <string name="enter_the_numbers">Enter the numbers:</string>
+    <string name="enter_the_numbers">أدخل الأرقام:</string>
     <string name="number">Four, Nine, Six</string>
     <string name="num1">1</string>
     <string name="num2">2</string>
@@ -19,20 +20,21 @@
     <string name="num0">0</string>
     <string name="numdel"><![CDATA[<<]]></string>
     <string name="list_app_dis">Discover the fun world of Arabic with ...</string>
-    <string name="app_url">View on App Store</string>
+    <string name="app_url">عرض في متجر التطبيقات</string>
     <string name="list_app_name">AlifBee</string>
-    <string name="parents_lock">Parents Lock</string>
+    <string name="parents_lock">قفل الوالدين</string>
     <string name="more_by_alifBee">More by AlifBee</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
+
+    <string name="zero">صفر</string>
+    <string name="one">واحد </string>
+    <string name="two"> اثنان </string>
+    <string name="three"> ثلاثة </string>
+    <string name="four"> أربعة </string>
+    <string name="five"> خمسة </string>
+    <string name="six"> ستة </string>
+    <string name="seven"> سبعة </string>
+    <string name="eight"> ثمانية </string>
+    <string name="nine"> تسعة </string>
 </resources>

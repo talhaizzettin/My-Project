@@ -34,38 +34,6 @@ class HomeActivity : AppCompatActivity() {
 
         var music = true
 
-        binding.moreTV.setOnTouchListener { v: View, event: MotionEvent ->
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    movedOutSide = false
-                    v.animate().apply {
-                        duration = 100
-                        scaleX(0.9f)
-                        scaleY(0.9f)
-                    }.start()
-                }
-                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                    movedOutSide = true
-                    v.animate().apply {
-                        duration = 100
-                        scaleX(1f)
-                        scaleY(1f)
-                    }.start()
-                }
-                MotionEvent.ACTION_MOVE -> {
-                    val rect = Rect(v.left, v.top, v.right, v.bottom)
-                    if (!rect.contains(
-                            v.left + event.x.toInt(),
-                            v.top + event.y.toInt()
-                        ) && !movedOutSide
-                    ) {
-                        movedOutSide = true
-                        v.animate().scaleX(1f).scaleY(1f).setDuration(100).start()
-                    }
-                }
-            }
-            false
-        }
 
         binding.moreTV.setOnClickListener {
             val intent = Intent(this@HomeActivity, MoreActivity::class.java)

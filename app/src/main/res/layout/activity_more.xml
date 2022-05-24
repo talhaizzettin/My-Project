@@ -22,7 +22,8 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/babutton" />
+            app:srcCompat="@drawable/babutton"
+            android:rotationY="@integer/rotate_en"/>
 
         <TextView
             android:id="@+id/tvtoptext"

@@ -1,6 +1,6 @@
 package com.example.alifbee.model
 
-data class En(
+data class TheApps(
     val android_link: String,
     val description: String,
     val icon: String,

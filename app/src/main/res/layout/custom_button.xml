@@ -6,28 +6,29 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/button_shadow"
+        android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <View
+            android:id="@+id/btn_shadow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
-            android:background="@drawable/shadow_with_border" />
+            android:background="@drawable/shadow_of_white_bg" />
 
         <LinearLayout
-            android:id="@+id/button_backgrond"
+            android:id="@+id/btn_bg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:layout_marginStart="1dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="1dp"
             android:layout_marginBottom="7dp"
-            android:background="@drawable/border"
+            android:background="@drawable/white_bg"
+            android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp">
 
@@ -35,8 +36,8 @@
                 android:id="@+id/button_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:contentDescription="@string/todo"
                 app:srcCompat="@drawable/buticon"
                 tools:ignore="ImageContrastCheck" />
@@ -45,6 +46,7 @@
                 android:id="@+id/button_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/dosis_semi_bold"
                 android:text="@string/app_name"
@@ -54,10 +56,11 @@
         </LinearLayout>
 
         <View
+            android:id="@+id/btn_border"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-            android:background="@drawable/botbris" />
+            android:background="@drawable/border_of_white_bg" />
 
     </RelativeLayout>
 

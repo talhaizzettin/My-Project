@@ -12,6 +12,7 @@
     android:paddingBottom="0dp">
 
     <LinearLayout
+        android:gravity="start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/appsback"
@@ -29,6 +30,7 @@
             app:srcCompat="@drawable/img3" />
 
         <LinearLayout
+            android:gravity="start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

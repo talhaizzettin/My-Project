@@ -25,7 +25,7 @@
     <com.example.alifbee.ui.MyCustomView
         android:id="@+id/bu1"
         style="@style/lockBtn"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_10"
         app:btnText="1"
         app:layout_constraintBottom_toTopOf="@+id/bu4"
         app:layout_constraintEnd_toStartOf="@+id/bu2"
@@ -35,7 +35,7 @@
     <com.example.alifbee.ui.MyCustomView
         android:id="@+id/bu4"
         style="@style/lockBtn"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_10"
         app:btnText="4"
         app:layout_constraintBottom_toTopOf="@+id/bu7"
         app:layout_constraintEnd_toStartOf="@+id/bu5"
@@ -46,7 +46,7 @@
     <com.example.alifbee.ui.MyCustomView
         android:id="@+id/bu7"
         style="@style/lockBtn"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_10"
         app:btnText="7"
         app:layout_constraintBottom_toTopOf="@+id/buh"
         app:layout_constraintEnd_toStartOf="@+id/bu8"
@@ -57,7 +57,7 @@
     <com.example.alifbee.ui.MyCustomView
         android:id="@+id/buh"
         style="@style/lockBtn"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_10"
         android:visibility="invisible"
         app:btnText="0"
         app:layout_constraintBottom_toBottomOf="parent"

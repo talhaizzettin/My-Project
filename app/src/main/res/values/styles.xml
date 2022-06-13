@@ -5,7 +5,7 @@
         <item name="android:layout_width">80dp</item>
         <item name="btnIconVisible">false</item>
         <item name="btnTextColor">@color/num</item>
-        <item name="btnTextSize">18sp</item>
+        <item name="btnTextSize">@dimen/num_btn_font_size</item>
         <item name="btnBackgrond">@drawable/white_bg</item>
         <item name="btnShadow">@drawable/shadow_of_white_bg</item>
         <item name="btnBorder">@drawable/border_of_white_bg</item>
@@ -15,7 +15,7 @@
         <item name="android:layout_width">80dp</item>
         <item name="btnIconVisible">false</item>
         <item name="btnTextColor">@color/white</item>
-        <item name="btnTextSize">18sp</item>
+        <item name="btnTextSize">@dimen/num_btn_font_size</item>
         <item name="btnBackgrond">@drawable/red_bg</item>
         <item name="btnShadow">@drawable/shadow_of_red_bg</item>
         <item name="btnBorder">@drawable/border_of_red_bg</item>

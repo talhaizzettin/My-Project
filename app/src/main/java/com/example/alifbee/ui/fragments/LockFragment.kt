@@ -3,7 +3,6 @@ package com.example.alifbee.ui.fragments
 import android.annotation.SuppressLint
 import android.graphics.Rect
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -13,8 +12,6 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.alifbee.R
 import com.example.alifbee.databinding.FragmentLockBinding
-import com.example.alifbee.ui.activity.MoreActivity
-import com.example.alifbee.ui.utils.touchListener
 import kotlin.random.Random
 
 class LockFragment : Fragment() {
@@ -97,7 +94,6 @@ class LockFragment : Fragment() {
             del()
         }
 
-        //binding.bude.setOnTouchListener(touchListener)
 
         binding.morebackbut.setOnTouchListener { v, motionEvent ->
             when (motionEvent.action) {

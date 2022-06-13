@@ -23,7 +23,7 @@ class MyCustomView(context: Context, attrs: AttributeSet) : RelativeLayout(conte
     var btnBg: LinearLayout
     var btnShdow: View
     var btnBorder : View
-    lateinit var btn : RelativeLayout
+    var btn : RelativeLayout
 
 
     init {

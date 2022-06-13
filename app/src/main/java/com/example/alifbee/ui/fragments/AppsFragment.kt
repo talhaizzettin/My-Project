@@ -11,12 +11,10 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.alifbee.api.Retr
 import com.example.alifbee.databinding.FragmentAppsBinding
 import com.example.alifbee.model.AppsRes
-import com.example.alifbee.ui.activity.MoreActivity
 import com.example.alifbee.ui.adapters.Apps2Adapter
 import retrofit2.HttpException
 import java.io.IOException
@@ -46,7 +44,7 @@ class AppsFragment : Fragment() {
     }
 
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint("ClickableViewAccessibility", "NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

@@ -14,10 +14,6 @@ import kotlinx.android.synthetic.main.apps.view.*
 class Apps2Adapter : RecyclerView.Adapter<Apps2Adapter.AppsHolder>() {
 
     inner class AppsHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-
-
-
-
     var apps: List<TheApps> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppsHolder {
@@ -43,10 +39,5 @@ class Apps2Adapter : RecyclerView.Adapter<Apps2Adapter.AppsHolder>() {
                 }
             }
     }
-
-
     override fun getItemCount() = apps.size
-
-
-
 }

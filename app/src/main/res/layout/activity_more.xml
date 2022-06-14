@@ -8,7 +8,6 @@
     tools:context=".ui.activity.MoreActivity">
 
 
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
         android:name="androidx.navigation.fragment.NavHostFragment"

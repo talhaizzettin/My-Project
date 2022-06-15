@@ -27,7 +27,6 @@ class Apps2Adapter : RecyclerView.Adapter<Apps2Adapter.AppsHolder>() {
     }
 
     override fun onBindViewHolder(holder: AppsHolder, position: Int) {
-
             val app = apps[position]
             holder.itemView.apply {
                 Picasso.get().load(app.icon).into(apps_img)

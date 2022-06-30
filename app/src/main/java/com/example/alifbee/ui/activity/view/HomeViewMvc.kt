@@ -1,3 +1,5 @@
+package com.example.alifbee.ui.activity.view
+
 import android.content.Context
 import android.content.Intent
 import android.view.MotionEvent

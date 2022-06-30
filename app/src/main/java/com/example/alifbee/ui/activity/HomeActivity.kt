@@ -5,11 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.alifbee.ui.activity.view.HomeViewMvc
+import com.example.alifbee.ui.activity.view.HomeViewMvcImpl
 
 
 class HomeActivity : AppCompatActivity(), HomeViewMvc.Listener {
 
-    lateinit var hViewMcv: HomeViewMvcImpl
+     private lateinit var hViewMcv: HomeViewMvcImpl
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {

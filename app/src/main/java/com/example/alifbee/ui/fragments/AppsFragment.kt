@@ -16,14 +16,17 @@ import com.example.alifbee.api.Retr
 import com.example.alifbee.databinding.FragmentAppsBinding
 import com.example.alifbee.model.AppsRes
 import com.example.alifbee.ui.adapters.Apps2Adapter
+import com.example.alifbee.ui.fragments.view.AppsView
+import com.example.alifbee.ui.fragments.view.AppsViewImpl
 import retrofit2.HttpException
 import java.io.IOException
 import java.util.*
 
 
-class AppsFragment : Fragment() {
+class AppsFragment : Fragment(),AppsView.Listener {
 
     private lateinit var apps2Adapter: Apps2Adapter
+    lateinit var aViewMvc : AppsView
 
     private var _binding: FragmentAppsBinding? = null
     private val binding get() = _binding!!
@@ -34,8 +37,8 @@ class AppsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAppsBinding.inflate(inflater, container, false)
-        return binding.root
+        aViewMvc = AppsViewImpl(inflater,container)
+        return aViewMvc.getRootView()
     }
 
     override fun onDestroyView() {
@@ -120,5 +123,4 @@ class AppsFragment : Fragment() {
             layoutManager = LinearLayoutManager(activity)
         }
     }
-
 }

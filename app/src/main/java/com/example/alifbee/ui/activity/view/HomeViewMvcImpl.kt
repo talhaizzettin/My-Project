@@ -1,6 +1,5 @@
-package com.example.alifbee.ui.activity
+package com.example.alifbee.ui.activity.view
 
-import HomeViewMvc
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -16,6 +15,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.alifbee.R
 import com.example.alifbee.databinding.ActivityHomeBinding
 import com.example.alifbee.ui.Constants
+import com.example.alifbee.ui.activity.MoreActivity
 import com.example.alifbee.ui.adapters.ImgSlidAdapter
 
 
@@ -27,14 +27,15 @@ class HomeViewMvcImpl(
     lifecycle: Lifecycle
 ) : HomeViewMvc {
 
-    fun morByUs(listener: HomeViewMvc.Listener) {
-        this.listener = listener
-    }
+
 
     private lateinit var listener: HomeViewMvc.Listener
     private var movedOutSide = true
     private val binding = ActivityHomeBinding.inflate(inflater, parent, false)
 
+    fun morByUs(listener: HomeViewMvc.Listener) {
+        this.listener = listener
+    }
     init {
         var music = true
         binding.musicImg.setOnClickListener {

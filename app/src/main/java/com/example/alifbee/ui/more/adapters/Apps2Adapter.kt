@@ -1,4 +1,4 @@
-package com.example.alifbee.ui.adapters
+package com.example.alifbee.ui.more.adapters
 
 import android.content.Intent
 import android.net.Uri

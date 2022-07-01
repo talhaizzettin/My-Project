@@ -1,24 +1,24 @@
-package com.example.alifbee.ui.activity
+package com.example.alifbee.ui.home
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.alifbee.ui.activity.view.HomeViewMvc
-import com.example.alifbee.ui.activity.view.HomeViewMvcImpl
+import com.example.alifbee.ui.home.mvc.HomeViewMvc
+import com.example.alifbee.ui.home.mvc.HomeViewMvcImpl
 
 
 class HomeActivity : AppCompatActivity(), HomeViewMvc.Listener {
 
-     private lateinit var hViewMcv: HomeViewMvcImpl
+     private lateinit var hViewMcv: HomeViewMvc
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         hViewMcv = HomeViewMvcImpl(layoutInflater, null, supportFragmentManager, lifecycle)
+        hViewMcv.registerListener(this)
         hideSystemBars()
-        hViewMcv.morByUs(this)
         setContentView(hViewMcv.getRootView())
     }
 
@@ -32,4 +32,5 @@ class HomeActivity : AppCompatActivity(), HomeViewMvc.Listener {
     override fun onMoreByUsClicked(intent: Intent) {
         startActivity(intent)
     }
+
 }

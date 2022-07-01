@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/primary_color"
     android:orientation="vertical"
-    tools:context=".ui.activity.HomeActivity">
+    tools:context=".ui.home.HomeActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             app:srcCompat="@drawable/on"
             />
 
-        <com.example.alifbee.ui.MyCustomView
+        <com.example.alifbee.classes.MyCustomView
             android:id="@+id/moreTV"
             android:layout_width="150dp"
             android:layout_height="50dp"

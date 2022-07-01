@@ -1,4 +1,4 @@
-package com.example.alifbee.ui.activity
+package com.example.alifbee.ui.main
 
 
 import android.content.Intent
@@ -7,18 +7,23 @@ import android.os.Bundle
 import com.example.alifbee.databinding.ActivityMainBinding
 import android.os.Handler
 import android.view.View
+import com.example.alifbee.ui.home.HomeActivity
+import com.example.alifbee.ui.main.mvc.MainViewImpl
+import com.example.alifbee.ui.main.mvc.MainViewMvc
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainViewMvc.Listener{
 
-    private lateinit var binding: ActivityMainBinding
+
+    lateinit var mainViewMvc : MainViewMvc
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        mainViewMvc = MainViewImpl(layoutInflater,null)
+        mainViewMvc.registerListener(this)
         hideSystemBars()
-        setContentView(binding.root)
+        setContentView(mainViewMvc.getRootView())
+
         Handler().postDelayed({
             val intent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(intent)

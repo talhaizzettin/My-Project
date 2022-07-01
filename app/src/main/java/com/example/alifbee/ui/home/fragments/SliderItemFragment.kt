@@ -1,4 +1,4 @@
-package com.example.alifbee.ui.fragments
+package com.example.alifbee.ui.home.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

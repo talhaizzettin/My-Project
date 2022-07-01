@@ -1,7 +1,6 @@
-package com.example.alifbee.ui.activity.view
+package com.example.alifbee.ui.home.mvc
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.util.Log
@@ -15,8 +14,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.alifbee.R
 import com.example.alifbee.databinding.ActivityHomeBinding
 import com.example.alifbee.ui.Constants
-import com.example.alifbee.ui.activity.MoreActivity
-import com.example.alifbee.ui.adapters.ImgSlidAdapter
+import com.example.alifbee.ui.common.BaseObservableViewMvc
+import com.example.alifbee.ui.home.adapters.ImgSlidAdapter
+import com.example.alifbee.ui.more.MoreActivity
 
 
 @SuppressLint("ClickableViewAccessibility")
@@ -25,18 +25,17 @@ class HomeViewMvcImpl(
     parent: ViewGroup?,
     supportFragmentManager: FragmentManager,
     lifecycle: Lifecycle
-) : HomeViewMvc {
+) : BaseObservableViewMvc<HomeViewMvc.Listener>(), HomeViewMvc {
 
 
-
-    private lateinit var listener: HomeViewMvc.Listener
     private var movedOutSide = true
-    private val binding = ActivityHomeBinding.inflate(inflater, parent, false)
+    private var binding : ActivityHomeBinding
 
-    fun morByUs(listener: HomeViewMvc.Listener) {
-        this.listener = listener
-    }
+
     init {
+        binding = ActivityHomeBinding.inflate(inflater, parent, false)
+        setRootView(binding.root)
+
         var music = true
         binding.musicImg.setOnClickListener {
             music = if (music) {
@@ -85,21 +84,11 @@ class HomeViewMvcImpl(
         }
         binding.moreTV.setOnClickListener {
             val intent = Intent(getContext(), MoreActivity::class.java)
-            listener.onMoreByUsClicked(intent)
+            for (listener in listeners){
+                listener.onMoreByUsClicked(intent)
+            }
         }
 
-    }
-
-    override fun <T : View> findViewById(id: Int): T {
-        return getRootView().findViewById(id)
-    }
-
-    override fun getContext(): Context {
-        return getRootView().context
-    }
-
-    override fun getRootView(): View {
-        return binding.root
     }
 
     override fun setOnTouchListener(v: View, event: MotionEvent): Boolean {
@@ -148,6 +137,4 @@ class HomeViewMvcImpl(
             }
         }
     }
-
-
 }

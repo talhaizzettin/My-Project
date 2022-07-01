@@ -15,11 +15,11 @@
             android:name=".TestActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.MoreActivity"
+            android:name=".ui.more.MoreActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.HomeActivity"
+            android:name=".ui.home.HomeActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="false"
             android:label="Home"
@@ -27,7 +27,7 @@
             android:theme="@style/Theme.AlifBee.la"
             android:windowFullscreen="true" />
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
             android:screenOrientation="portrait"

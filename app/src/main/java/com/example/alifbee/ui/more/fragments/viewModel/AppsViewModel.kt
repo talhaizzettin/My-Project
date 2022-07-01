@@ -1,4 +1,4 @@
-package com.example.alifbee.ui.fragments.viewModel
+package com.example.alifbee.ui.more.fragments.viewModel
 
 import androidx.lifecycle.ViewModel
 

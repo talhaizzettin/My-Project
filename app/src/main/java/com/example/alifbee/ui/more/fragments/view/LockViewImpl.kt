@@ -1,21 +1,21 @@
-package com.example.alifbee.ui.fragments
+package com.example.alifbee.ui.more.fragments.view
 
 import android.annotation.SuppressLint
 import android.graphics.Rect
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
 import com.example.alifbee.R
 import com.example.alifbee.databinding.FragmentLockBinding
+import com.example.alifbee.ui.common.BaseObservableViewMvc
 import kotlin.random.Random
 
-class LockFragment : Fragment() {
-
+@SuppressLint("ClickableViewAccessibility")
+class LockViewImpl(
+    inflater: LayoutInflater,
+    parent: ViewGroup?
+) :BaseObservableViewMvc<LockViewMvc.Listener>(),LockViewMvc {
     private var _binding: FragmentLockBinding? = null
     private val binding get() = _binding!!
 
@@ -28,73 +28,44 @@ class LockFragment : Fragment() {
     private var secondNum: Int = 0
     private var thirdNum: Int = 0
 
-
-    @SuppressLint("ClickableViewAccessibility")
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentLockBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    @SuppressLint("ClickableViewAccessibility")
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    init {
+        _binding = FragmentLockBinding.inflate(inflater,parent,false)
+        setRootView(binding.root)
         randomNum()
 
         binding.include.bu0.setOnClickListener {
-            theNum = 0
-            myCheck()
+            onClick(0)
         }
         binding.include.bu1.setOnClickListener {
-            theNum = 1
-            myCheck()
+            onClick(1)
         }
         binding.include.bu2.setOnClickListener {
-            theNum = 2
-            myCheck()
+            onClick(2)
         }
         binding.include.bu3.setOnClickListener {
-            theNum = 3
-            myCheck()
+            onClick(3)
         }
         binding.include.bu4.setOnClickListener {
-            theNum = 4
-            myCheck()
+            onClick(4)
         }
         binding.include.bu5.setOnClickListener {
-            theNum = 5
-            myCheck()
+            onClick(5)
         }
         binding.include.bu6.setOnClickListener {
-            theNum = 6
-            myCheck()
+            onClick(6)
         }
         binding.include.bu7.setOnClickListener {
-            theNum = 7
-            myCheck()
+            onClick(7)
         }
         binding.include.bu8.setOnClickListener {
-            theNum = 8
-            myCheck()
+            onClick(8)
         }
         binding.include.bu9.setOnClickListener {
-            theNum = 9
-            myCheck()
+            onClick(9)
         }
         binding.include.bude.setOnClickListener {
             del()
         }
-
-
         binding.morebackbut.setOnTouchListener { v, motionEvent ->
             when (motionEvent.action) {
                 MotionEvent.ACTION_DOWN -> {
@@ -124,33 +95,32 @@ class LockFragment : Fragment() {
             }
             false
         }
-
-
-
         binding.morebackbut.setOnClickListener {
-            activity?.onBackPressed()
+            for (listener in listeners){
+                listener.onBackPressed()
+            }
         }
-
     }
 
     @SuppressLint("SetTextI18n")
-    fun randomNum() {
+    override fun randomNum() {
         val myNumberList = HashMap<Int, String>()
-        myNumberList[0] = getString(R.string.zero)
-        myNumberList[1] = getString(R.string.one)
-        myNumberList[2] = getString(R.string.two)
-        myNumberList[3] = getString(R.string.three)
-        myNumberList[4] = getString(R.string.four)
-        myNumberList[5] = getString(R.string.five)
-        myNumberList[6] = getString(R.string.six)
-        myNumberList[7] = getString(R.string.seven)
-        myNumberList[8] = getString(R.string.eight)
-        myNumberList[9] = getString(R.string.nine)
+        myNumberList[0] = getContext().getString(R.string.zero)
+        myNumberList[1] = getContext().getString(R.string.one)
+        myNumberList[2] = getContext().getString(R.string.two)
+        myNumberList[3] = getContext().getString(R.string.three)
+        myNumberList[4] = getContext().getString(R.string.four)
+        myNumberList[5] = getContext().getString(R.string.five)
+        myNumberList[6] = getContext().getString(R.string.six)
+        myNumberList[7] = getContext().getString(R.string.seven)
+        myNumberList[8] = getContext().getString(R.string.eight)
+        myNumberList[9] = getContext().getString(R.string.nine)
+
         binding.textnum.text =
             myNumberList[numb1] + ", " + myNumberList[numb2] + ", " + myNumberList[numb3]
     }
 
-    private fun del() {
+    override fun del() {
         when (index) {
             1 -> {
                 binding.include.num1.text = ""
@@ -167,7 +137,7 @@ class LockFragment : Fragment() {
         }
     }
 
-    private fun myCheck() {
+    override fun myCheck() {
         when (index) {
             0 -> {
                 binding.include.num1.text = theNum.toString()
@@ -184,12 +154,22 @@ class LockFragment : Fragment() {
                 binding.include.num3.text = theNum.toString()
                 thirdNum = theNum
                 if (numb1 == firstNum && numb2 == secondNum && numb3 == thirdNum) {
-                    findNavController().navigate(R.id.action_lockFragment_to_moreFragment)
-
+                    for (listener in listeners){
+                        listener.nextFragment()
+                    }
                 } else {
-                    Toast.makeText(context, "Try Agn", Toast.LENGTH_LONG).show()
+                    Toast.makeText(getContext(), "Try Agn", Toast.LENGTH_LONG).show()
                 }
             }
         }
+    }
+
+    override fun onClick(number: Int) {
+        theNum = number
+        myCheck()
+    }
+
+    override fun destroyView() {
+        _binding = null
     }
 }

@@ -1,19 +1,18 @@
-package com.example.alifbee.ui.activity.view
+package com.example.alifbee.ui.home.mvc
 
 import android.content.Context
 import android.content.Intent
 import android.view.MotionEvent
 import android.view.View
+import com.example.alifbee.ui.common.ObservableViewMvc
+import com.example.alifbee.ui.common.ViewMvc
 
-interface HomeViewMvc {
+interface HomeViewMvc : ObservableViewMvc<HomeViewMvc.Listener> {
 
     interface Listener {
         fun onMoreByUsClicked(intent: Intent)
     }
 
-    fun getRootView(): View
-    fun getContext(): Context
-    fun <T : View> findViewById(id: Int): T
     fun setOnTouchListener(v: View, event: MotionEvent): Boolean
     fun chek(way: Int)
 }

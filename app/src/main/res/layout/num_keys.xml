@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.07999998"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu1"
         style="@style/lockBtn"
         android:layout_marginTop="@dimen/margin_10"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num1" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu4"
         style="@style/lockBtn"
         android:layout_marginTop="@dimen/margin_10"
@@ -43,7 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bu1" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu7"
         style="@style/lockBtn"
         android:layout_marginTop="@dimen/margin_10"
@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bu4" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/buh"
         style="@style/lockBtn"
         android:layout_marginTop="@dimen/margin_10"
@@ -100,7 +100,7 @@
         app:layout_constraintStart_toEndOf="@+id/num2"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu2"
         style="@style/lockBtn"
         android:layout_marginStart="10dp"
@@ -112,7 +112,7 @@
         app:layout_constraintStart_toEndOf="@+id/bu1"
         app:layout_constraintTop_toTopOf="@+id/bu1" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu3"
         style="@style/lockBtn"
         app:btnText="3"
@@ -122,7 +122,7 @@
         app:layout_constraintStart_toEndOf="@+id/bu2"
         app:layout_constraintTop_toTopOf="@+id/bu2" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu5"
         style="@style/lockBtn"
         android:layout_marginStart="10dp"
@@ -134,7 +134,7 @@
         app:layout_constraintStart_toEndOf="@+id/bu4"
         app:layout_constraintTop_toTopOf="@+id/bu4" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu6"
         style="@style/lockBtn"
         app:btnText="6"
@@ -144,7 +144,7 @@
         app:layout_constraintStart_toEndOf="@+id/bu5"
         app:layout_constraintTop_toTopOf="@+id/bu5" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu8"
         style="@style/lockBtn"
         android:layout_marginStart="10dp"
@@ -156,7 +156,7 @@
         app:layout_constraintStart_toEndOf="@+id/bu7"
         app:layout_constraintTop_toTopOf="@+id/bu7" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu9"
         style="@style/lockBtn"
         app:btnText="9"
@@ -166,7 +166,7 @@
         app:layout_constraintStart_toEndOf="@+id/bu8"
         app:layout_constraintTop_toTopOf="@+id/bu8" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bu0"
         style="@style/lockBtn"
         app:btnText="0"
@@ -176,7 +176,7 @@
         app:layout_constraintStart_toEndOf="@+id/buh"
         app:layout_constraintTop_toTopOf="@+id/buh" />
 
-    <com.example.alifbee.ui.MyCustomView
+    <com.example.alifbee.classes.MyCustomView
         android:id="@+id/bude"
         style="@style/delBtn"
         app:btnText="@string/numdel"

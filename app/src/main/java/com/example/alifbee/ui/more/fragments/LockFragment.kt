@@ -14,6 +14,7 @@ class LockFragment : Fragment(), LockViewMvc.Listener {
 
     private lateinit var lViewMvc: LockViewMvc
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -2,27 +2,20 @@ package com.example.alifbee.ui.more.fragments.view
 
 import android.annotation.SuppressLint
 import android.graphics.Rect
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.alifbee.api.Retr
 import com.example.alifbee.databinding.FragmentAppsBinding
-import com.example.alifbee.model.AppsRes
+import com.example.alifbee.model.TheApps
 import com.example.alifbee.ui.common.BaseObservableViewMvc
 import com.example.alifbee.ui.more.adapters.Apps2Adapter
-import retrofit2.HttpException
-import java.io.IOException
-import java.util.*
 
 @SuppressLint("ClickableViewAccessibility", "NotifyDataSetChanged")
 class AppsViewImpl(
     inflater: LayoutInflater,
-    parent: ViewGroup?,
-    lifecycleScope: LifecycleCoroutineScope
+    parent: ViewGroup?
 ) : BaseObservableViewMvc<AppsView.Listener>(), AppsView {
 
     private var _binding: FragmentAppsBinding? = null
@@ -33,8 +26,8 @@ class AppsViewImpl(
     init {
         _binding = FragmentAppsBinding.inflate(inflater, parent, false)
         setRootView(binding.root)
+        binding.porBar.isVisible = true
         setupRV()
-        setApi(lifecycleScope)
 
 
         binding.morebackbut.setOnTouchListener { v, motionEvent ->
@@ -68,7 +61,7 @@ class AppsViewImpl(
         }
 
         binding.morebackbut.setOnClickListener {
-            for (listener in listeners){
+            for (listener in listeners) {
                 listener.onBackPressed()
             }
 
@@ -84,34 +77,10 @@ class AppsViewImpl(
         }
     }
 
-    override fun setApi(lifecycleScope: LifecycleCoroutineScope) {
-        lifecycleScope.launchWhenCreated {
-            binding.porBar.isVisible = true
-            val jsonApps = try {
-                Retr.api.getApps()
-            } catch (e: IOException) {
-                Log.e("Error", "INT no")
-                binding.porBar.isVisible = false
-                return@launchWhenCreated
-            } catch (e: HttpException) {
-                Log.e("Error", "HttpException no")
-                binding.porBar.isVisible = false
-                return@launchWhenCreated
-            }
-            if (jsonApps.isSuccessful && jsonApps.body() != null) {
-                val theApps: AppsRes = jsonApps.body()!!
-                if (Locale.getDefault().language == Locale("ar").language)
-                    apps2Adapter.apps = theApps.body.our_apps.ar
-                else {
-                    apps2Adapter.apps = theApps.body.our_apps.en
-                }
-                apps2Adapter.notifyDataSetChanged()
-            } else {
-                Log.e("body", "${jsonApps.body()}")
-                Log.e("isSuccessful", "${jsonApps.isSuccessful}")
-            }
-            binding.porBar.isVisible = false
-        }
+    override fun setAppsData(apps: List<TheApps>) {
+        apps2Adapter.apps = apps
+        apps2Adapter.notifyDataSetChanged()
+        binding.porBar.isVisible = false
     }
 
     override fun destroyView() {
